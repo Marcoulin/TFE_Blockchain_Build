@@ -52,7 +52,11 @@ contract Marketplace {
         Product memory _product = products[_id]; 
         //Fetch owner 
         address payable _seller = _product.owner;
-        //Make sure product is valid 
+        //Make sure product is valid
+        require(_product.id > 0 && _product.id <= productCounter); 
+        require(msg.value >= _product.price); 
+        require(!_product.purchased); 
+        require(_seller != msg.sender); 
         //Purchase it/Transfer ownership to the buyer
         _product.owner = msg.sender; 
         //Mark as purchased
@@ -62,7 +66,7 @@ contract Marketplace {
         //Paying the seller 
         address(_seller).transfer(msg.value); 
         //Trigger an event
-        emit ProductPurchased(productCounter, _product.name, _product.price, msg.sender, false);
+        emit ProductPurchased(productCounter, _product.name, _product.price, msg.sender, true);
 
     }
     
