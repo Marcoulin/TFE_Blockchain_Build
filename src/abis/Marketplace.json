@@ -5614,12 +5614,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x954D014eF74a78134Ea3A048D66Cd2EE7906dbd2",
-      "transactionHash": "0x8dd8d5f3390b82327cdedbe5729635a584312f2c0d07d6946cc39afc3e64b920"
+      "address": "0xF061E72823116E0f49653677f672B69F8cB76248",
+      "transactionHash": "0x001eca5a128d78e3092784d2b8e4b896b4481d0c3d2b0bed317859617aac9570"
     }
   },
   "schemaVersion": "3.4.2",
-  "updatedAt": "2021-08-10T23:30:25.844Z",
+  "updatedAt": "2021-08-12T01:47:19.120Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
